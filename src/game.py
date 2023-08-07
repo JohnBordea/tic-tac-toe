@@ -7,6 +7,10 @@ class Game():
         pygame.init()
         self.screen = pygame.display.set_mode( (WIDTH, HEIGHT) )
         self.clock = pygame.time.Clock()
+        self.fonts = {
+            "regular": pygame.font.Font('./data/fonts/TNR.ttf', 30),
+            "bald":    pygame.font.Font('./data/fonts/TNR.ttf', 30, bold=pygame.font.Font.bold)
+        }
         self.running, self.playing = True, True
         self.dt, self.prev_time = 0, 0
         self.state_stack = []
