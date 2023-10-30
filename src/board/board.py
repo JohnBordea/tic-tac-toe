@@ -46,6 +46,10 @@ class BoardData():
             self.game_over = ("diag", 2)
             return
 
+        if self.is_board_full():
+            self.game_over = ("draw")
+            return
+
     def reset(self):
         self.player = 1
         self.board = [
